@@ -343,7 +343,7 @@
                 mouse.distAxX = 0;
                 prev = this.placeEl.prev(opt.itemNodeName);
                 // increase horizontal level if previous sibling exists and is not collapsed
-				var event = jQuery.Event( "beforeAddChild" );
+				var event = jQuery.Event( "beforeChangeDepth" );
                 this.el.trigger(event);
                 if (mouse.distX > 0 && prev.length && !prev.hasClass(opt.collapsedClass) && event.result != false) {
                      // cannot increase level when item above is collapsed
